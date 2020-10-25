@@ -97,7 +97,7 @@ static void release(void) {
 	critical--; } while (0);
 }
 #if linux
-#include <asm/sigcontext.h>
+// #include <asm/sigcontext.h>
 static int interrupt(int sig, struct sigcontext sc) {
 	if (critical ||
 	   sc.eip >= (unsigned long)_MONITOR
